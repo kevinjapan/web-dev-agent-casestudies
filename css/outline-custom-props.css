@@ -1,0 +1,296 @@
+/* 
+    outline css - Custom Props
+*/
+
+:root {
+
+   /* 
+      COLORS
+      =============================================
+   */
+   /*
+
+   primary colors - 1 - 3 brand colors 
+
+   */
+   --primary_1_bg_darken: hsl(225, 52%, 12%);
+   --primary_1_bg:        hsl(225, 52%, 26%);
+   --primary_1_bg_lighten:hsl(225, 52%, 40%);
+   --primary_1_color:     white;
+
+   /* 
+
+   accent colors - highlight components / cta's / links  - complement primary color
+
+   */
+   --accent_1:            hsl(50, 99%, 48%);
+   --accent_1_bg_darken:  hsl(50, 99%, 28%);
+   --accent_1_bg:         hsl(50, 99%, 48%);      /* primary buttons */
+   --accent_1_bg_lighten: hsl(50, 99%, 68%);
+   --accent_1_color:      white;
+
+   /* 
+   
+   secondary colors - 3 - 5 - complement brand colors
+
+   */
+   --secondary_1:         hsl(218, 35%, 57%);     /* text color */
+   --secondary_2:         hsl(224, 14%, 53%);     /* secondary (sm) section supporting headers */
+   --secondary_1_bg:      hsl(0, 0%, 12%);        /* dark bg - footer */
+   --secondary_1_color:   white;
+
+   --secondary_2_bg:      hsl(0, 0%, 20%);        /* dark bg 2 - footnote / button.bg on secondary_1_bg*/
+   --secondary_2_color:   white;
+
+   --secondary_3_bg_dark: hsl(205, 33%, 24%);
+   --secondary_3_bg:      hsl(205, 33%, 34%);     /* dark bg 3 - underlying cover images on sections / cover_sections */
+   --secondary_3_bg_light:hsl(205, 33%, 44%); 
+   --secondary_3_color:   white;
+
+   /* 
+   
+   neutral colors - 2 -3 - light to dark - w/ some tint - perhaps tint of brand color
+   
+   */
+   --neutral_1:           hsl(220, 23%, 97%);     /* section background */
+   --neutral_1_bg_darken: hsl(220, 23%, 92%);
+   --neutral_1_bg:        hsl(220, 23%, 97%);
+   --neutral_1_bg_lighten:hsl(220, 23%, 100%);
+   --neutral_2_bg_darken: hsl(240, 100%, 85%);
+   --neutral_2_bg:        hsl(240, 100%, 90%);    /* neutral - 2 - blue */
+   --neutral_2_bg_lighten:hsl(240, 100%, 95%); 
+
+   /* 
+      
+   semantic colors - informative colors 
+
+   */
+   --semantic_negative_bg:hsl(0, 100%, 75%);      /* red    - negative / error */
+   --semantic_positive_bg:hsl(120, 93%, 79%);     /* green  - positive */
+   --semantic_warning_bg: hsl(39, 100%, 75%);     /* orange - warning  */
+   --semantic_neutral_bg: hsl(240, 100%, 75%);    /* blue   - neutral  */
+
+   /* 
+      
+   extended colors - 3 - 5 - optional (?)
+
+   */
+   --extended_bg:          #FFF;
+   --extended_color:       #000;
+
+
+   /* 
+   
+   text colors 
+   
+   */
+   --body_text_color:      hsl(240, 35%, 41%);
+   --grey_text:            lightgrey;
+
+
+/* 
+   LAYOUTS
+   =============================================
+*/
+
+   --header_height:450px;
+
+
+   --default_text_align: left;
+
+   --logo_font_color:var(--primary_1);
+   --logo_font_size:3rem;
+
+   --hero_text_color:     white;
+   --hero_text_width:100%;
+
+   --overlay_text_align:left;
+
+
+   --section_inline_padding:3rem;
+
+
+   /* 
+      margins 
+   */
+   --block_y_margins:0; 
+   --block_y_padding:3rem;
+
+
+
+   /* page */
+   --page_content_width:1100px;
+
+   /* logo */
+   --logo_width:200px;
+
+/* 
+   NAVIGATION
+   =============================================
+*/
+   /* 
+      nav behaviour 
+   */
+   --nav_position:static;
+
+   /* 
+      masthead - set height to 0 if absent 
+   */
+   --masthead_height:0px;
+
+   
+   /* 
+      md-lg screen navigation 
+   */
+   --nav_bar_height:80px; /* used by header/header bg_img */
+   --nav_bar_label_gap:3rem;
+   --nav_bar_bg:          white;
+   --nav_bar_text_color:  hsl(0, 24%, 35%);
+   --nav_dropdown_bg:       var(--primary_1_bg);
+   --nav_dropdown_color:  white;
+
+   /* dim page under extended dropdown */
+   --nav_dropdown_shadow:none;
+
+   /* item link highlight on hover */
+   --nav_item_bottom_border:solid 1px transparent;
+   --nav_item_on_hover_bottom_border:solid 1px hsl(50, 99%, 48%);
+
+   /* 
+      mobile navigation 
+   */
+   --nav_mobile_height:100px;
+   --nav_mobile_dropdown_bg:    white;
+   --nav_mobile_dropdown_color: black;
+   
+
+   /* 
+      borders 
+   */
+
+   --med-border:#DDD;
+   --component_border_radius:.25rem;
+   --box_shadow:lightgrey;
+
+   --default_heading_color: hsl(0, 0%, 27%);
+   
+
+/* 
+   TEXT / HEADINGS
+   =============================================
+*/
+
+   /* 
+      headings
+   */
+   --heading_1_size:4rem;
+   --heading_2_size:3rem;
+   --heading_3_size:2.5rem;
+   --heading_4_size:2rem;
+   --heading_5_size:1.5rem;
+   --heading_6_size:1.25rem;
+   --heading_1_line_height:4rem;
+   --heading_2_line_height:3rem;
+   --heading_3_line_height:2.75rem;
+   --heading_4_line_height:2.5rem;
+   --heading_5_line_height:2.3rem;
+   --heading_6_line_height:2rem;
+
+
+   /*  paragraphs */
+
+   --paragraph_width:50rem;
+   --paragraph_padding:1rem;
+
+   --section_overlay_text_color:white; /* text color over background images */
+
+/* 
+   BUTTONS
+   =============================================
+*/
+
+   /* buttons 
+      because buttons are one of our most expressive components
+   */
+
+   /* primary button */
+   --button_1_bg:            #F4C900;
+   --button_1_color:         #6B4444;
+   --button_1_border:none;
+   --button_2_shadow:none;
+   --button_1_on_hover_bg:   #DFBC0C;
+   --button_1_on_hover_color:#4E4D45;
+   --button_2_on_hover_shadow:none;
+
+   /* secondary button */
+   --button_2_bg:               #F5F5F5;
+   --button_2_color:            #AB7894;
+   --button_2_border:solid 1px  hsl(0, 0%, 82%);
+   --button_2_shadow:none;
+   --button_2_on_hover_bg:#FFFFFF;
+   --button_2_on_hover_color:   #705594;
+   --button_2_on_hover_shadow:2px 8px 5px 0px var(--box_shadow);
+   
+   /* tertiary button */
+   --button_3_bg: var(--secondary_2_bg);
+   --button_3_color: white;
+   --button_3_border:none;
+   --button_3_shadow:none;
+   --button_3_on_hover_bg:      black;
+   --button_3_on_hover_color:   white;
+   --button_3_on_hover_shadow:none;
+
+
+   --button_background:var(--accent_1);
+   --button_background_hover:var(--accent_1);
+   --button_border:none;
+   --button_radius:5rem;
+   --button_padding:1rem 2rem;
+   --button_font_size:1rem;
+   --button_font_weight:bold;
+
+   /* arrow_on_hover button inline text adjustment - fine-tune */
+   --arrow_on_hover_inline_padding:.75rem 1.75rem;
+
+   /* no_fill_button */
+   --no_fill_button_border:solid 1px hsl(0, 0%, 82%);
+
+
+/* 
+   FOOTER
+   =============================================
+*/
+   --footer_bg:var(--neutral_bg_dark);
+   --footer_color:white;
+
+
+
+/* 
+   Z-INDEX LAYERS
+   =============================================
+*/
+
+   /* z-index register - application layers */
+
+   --grid_1_z_index:100;
+   --nav_dimmer_z_index:-10;
+
+   --nav_z_index:900;
+   --nav_closed_dropdown_z_index:-3;
+   --nav_open_dropdown_z_index:-1;
+
+   --grid_1_bg_img_z_index:-1;
+   --cover_section_z_index:810;
+   --cover_section_dimmed_z_index:800;
+
+
+
+   /* components */
+
+   --animated_tiles_max_width:1100px;
+
+   --feature_block_y_margin:0;
+
+   --footer_top_margin:2rem;
+}
+

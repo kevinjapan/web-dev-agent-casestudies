@@ -1,0 +1,185 @@
+
+/* 
+Access classes - use these to access the custom props
+*/
+
+/*
+   bg color schemes
+*/
+.bg_lightgrey {
+   background-color:lightgrey;
+}
+.bg_lightgreen {
+   background-color:lightgreen;
+}
+
+
+/* bg_navy */
+.bg_navy                {background-color:navy;color:white;}
+.bg_navy h1, .bg_navy h2, .bg_navy h3, .bg_navy h4, .bg_navy h5, .bg_navy h6 {color:white;}
+.bg_navy button         {color:lightgrey;}
+.bg_navy button:hover   {color:white;border:solid 2px white;}
+
+/* bg_white */
+.bg_white                     {background-color:white;color:black;}
+.bg_white h1, .bg_white h2, .bg_white h3, .bg_white h4, .bg_white h5, .bg_white h6, 
+.bg_white div.overlay h1,
+.bg_white div.overlay *       {color:black;}
+.bg_white button              {color:grey;border:solid 2px grey;}
+.bg_white button:hover        {color:black;border:solid 2px black;}
+
+.bg_lightblue {background-color:lightblue;color:blue;}
+.bg_lightblue button              {color:grey;border:solid 2px grey;}
+.bg_lightblue button:hover        {color:black;border:solid 2px black;}
+
+
+
+
+.primary_bg,.primary_1_bg {
+   background-color:var(--primary_1_bg);
+   color:white;
+}
+
+
+
+
+/* to do : review below.. */
+
+/* bgs for blocks - so we can set other colors to complement - so these are not just single bg-color settings..*/
+.bg_primary {
+   color:var(--primary_color);
+   background-color:var(--bg_dark);
+}
+.bg_accent {
+   color:var(--accent_color);
+   background-color:var(--bg_accent);
+}
+.bg_secondary {
+   color:var(--secondary_color);
+   background-color:var(--secondary_bg);
+}
+
+
+.bg_secondary_2 {
+   color:var(--secondary_2_color);
+   background-color:var(--secondary_2_bg);
+}
+.bg_secondary_3 {
+   color:var(--secondary_3_color);
+   background-color:var(--secondary_3_bg);
+}
+
+.bg_neutral {
+   color:var(--neutral_color);
+   background-color:var(--bg_neutral);
+}
+
+.bg_neutral_2 {
+   color:var(--neutral_2_color);
+   background-color:var(--bg_neutral_2);
+}
+.bg_neutral_3 {
+   color:var(--neutral_3_color);
+   background-color:var(--bg_neutral_3);
+}
+
+
+.primary_bg h1,.primary_bg h2,.primary_bg h3,.primary_bg h4,.primary_bg h5,.primary_bg h6 {color:white;}
+.primary_bg_dark,.primary_1_bg_dark {
+   background-color:var(--primary_1_bg_darken);
+}
+.primary_bg_light,.primary_1_bg_light {
+  background-color:var(--primary_1_bg_lighten);
+}
+.accent_bg,.accent_1_bg {
+  background-color:var(--accent_1_bg);
+}
+.accent_bg_dark,.accent_1_bg_dark {
+   background-color:var(--accent_1_bg_darken);
+}
+.accent_bg_light,.accent_1_bg_light {
+   background-color:var(--accent_1_bg_lighten);
+}
+.secondary_bg,.secondary_1_bg {
+   color:var(secondary_1_color);
+   background-color:var(--secondary_1_bg);
+}
+.secondary_bg_dark,.secondary_1_bg_dark {
+   background-color:var(--secondary_1_bg_darken);
+}
+.secondary_bg_light,.secondary_1_bg_light {
+   background-color:var(--secondary_1_bg_lighten);
+}
+.secondary_2_bg,.secondary_2_bg {
+   background-color:var(--secondary_2_bg);
+}
+.secondary_2_bg_dark,.secondary_2_bg_dark {
+   background-color:var(--secondary_2_bg_darken);
+}
+.secondary_2_bg_light,.secondary_2_bg_light {
+   background-color:var(--secondary_2_bg_lighten);
+}
+.secondary_3_bg,.secondary_3_bg {
+   background-color:var(--secondary_3_bg);
+}
+.secondary_3_bg_dark,.secondary_3_bg_dark {
+   background-color:var(--secondary_3_bg_darken);
+}
+.secondary_3_bg_light,.secondary_3_bg_light {
+   background-color:var(--secondary_3_bg_lighten);
+}
+.neutral_bg,.neutral_1_bg {
+   background-color:var(--neutral_1_bg);
+}
+.neutral_bg_dark,.neutral_1_bg_dark {
+   background-color:var(--neutral_1_bg_darken);
+}
+.neutral_bg_light,.neutral_1_bg_light {
+   background-color:var(--neutral_1_bg_lighten);
+}
+.neutral_2_bg {
+   background-color:var(--neutral_2_bg);
+}
+.neutral_2_bg_dark {
+   background-color:var(--neutral_2_bg_darken);
+}
+.neutral_2_bg_light {
+   background-color:var(--neutral_2_bg_lighten);
+}
+.semantic_negative_bg {
+   background-color:var(--semantic_negative_bg);
+}
+.semantic_positive_bg {
+   background-color:var(--semantic_positive_bg);
+}
+.semantic_warning_bg {
+   background-color:var(--semantic_warning_bg);
+}
+.semantic_neutral_bg {
+   background-color:var(--semantic_neutral_bg);
+}
+
+
+.grey_text {
+   color:var(--grey_text);
+}
+
+
+/*
+   behaviours
+*/
+
+/* fade_in hides, then IntersectionObserver resets */
+.fade_in {
+   opacity:0;
+   transition:opacity .75s ease-in;
+}
+.appear {
+   opacity:1;
+   transition:opacity .75s ease-in;
+}
+.invisible_nav {
+   -webkit-transform:translateY(-100%);
+   transform:translateY(-100%);
+   transition:transform .6s ease-in;
+}
