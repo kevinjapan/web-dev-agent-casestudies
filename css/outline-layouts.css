@@ -142,7 +142,7 @@ nav {
    position:-webkit-sticky;
    position:sticky;
    top:0;
-   z-index:99999999999;
+   z-index:99999999999; /* to do : normalize and rollout */
    
    display:-webkit-box;
    display:-ms-flexbox;
