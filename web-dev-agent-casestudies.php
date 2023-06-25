@@ -40,8 +40,9 @@ class WedDevAgentCaseStudies {
    public function create_casestudy_post_type() {
 
       $labels = array(
-         'name' => __('Case Studies','web-dev-agent'),
-         'singular_name' =>  __('Case Study','web-dev-agent')
+         'name' => __('WDA Case Studies','web-dev-agent'),
+         'singular_name' =>  __('WDA Case Study','web-dev-agent'),
+         'menu_name' => 'Case Studies',
       );
       $args = array(
          'labels' => $labels,
@@ -70,34 +71,35 @@ class WedDevAgentCaseStudies {
    //
    public function enqueue_assets() 
    {
-      wp_enqueue_style(
-         'wda_outline',
-         plugin_dir_url( __FILE__ ) . 'css/outline.css',
-         array(),
-         1,
-         'all'
-      );  
-      wp_enqueue_style(
-         'wda_outline_layouts',
-         plugin_dir_url( __FILE__ ) . 'css/outline-layouts.css',
-         array(),
-         1,
-         'all'
-      );  
-      wp_enqueue_style(
-         'wda_outline_custom_props',
-         plugin_dir_url( __FILE__ ) . 'css/outline-custom-props.css',
-         array(),
-         1,
-         'all'
-      );  
-      wp_enqueue_style(
-         'wda_outline_utilities',
-         plugin_dir_url( __FILE__ ) . 'css/outline-utilities.css',
-         array(),
-         1,
-         'all'
-      ); 
+      // to do : these files are included w/ web dev agent theme - how to avoid duplication - plugin can be standalone?
+      // wp_enqueue_style(
+      //    'wda_outline',
+      //    plugin_dir_url( __FILE__ ) . 'css/outline.css',
+      //    array(),
+      //    1,
+      //    'all'
+      // );  
+      // wp_enqueue_style(
+      //    'wda_outline_layouts',
+      //    plugin_dir_url( __FILE__ ) . 'css/outline-layouts.css',
+      //    array(),
+      //    1,
+      //    'all'
+      // );  
+      // wp_enqueue_style(
+      //    'wda_outline_custom_props',
+      //    plugin_dir_url( __FILE__ ) . 'css/outline-custom-props.css',
+      //    array(),
+      //    1,
+      //    'all'
+      // );  
+      // wp_enqueue_style(
+      //    'wda_outline_utilities',
+      //    plugin_dir_url( __FILE__ ) . 'css/outline-utilities.css',
+      //    array(),
+      //    1,
+      //    'all'
+      // ); 
       // wp_enqueue_script(
       //    'web-dev-agent',
       //    plugin_dir_url( __FILE__ ) . 'js/web-dev-agent.js',
@@ -116,8 +118,6 @@ class WedDevAgentCaseStudies {
 		// Limit meta box to certain post types
 		$post_types = array( 'wda_casestudy' );
 
-      // to do :changed to $post_types in calls below.. ok?
-      //
 		if ( in_array( $post_type, $post_types ) ) {
 
 			add_meta_box(
@@ -208,30 +208,39 @@ class WedDevAgentCaseStudies {
       );
       $loop = new WP_Query($args);
 
+
+      // we limit to 3 most recent projects
+      $count = 0;
+
       ?>
       <section class="animated_tiles">
          <h3>Our work</h3>
          <ul>
-         <?php
-         while ( $loop->have_posts() ) {
-            $loop->the_post();
-               ?>
-               <li>aye
-                  <?php
-                  if(has_post_thumbnail()):?>
-                     <img src="<?php the_post_thumbnail_url('large'); ?>"/>
-                  <?php endif;
-                  ?>
-                  <h3><?php echo get_the_title();?></h3>
-                  <p><?php echo get_post_meta( get_the_ID(), 'wda_casestudy_tagline', true );?></p>
-                  <p><?php echo get_the_excerpt();?></p>
-                  <button><a href="<?php echo get_permalink(get_the_ID()); ?>">project details</a></button>
-                  ?>
-               </li>
             <?php
-         }
-         ?>
+            while ( $loop->have_posts() ) {
+               $loop->the_post();
+                  ?>
+                  <li>
+                     <?php
+                     if(has_post_thumbnail()):?>
+                        <img src="<?php the_post_thumbnail_url('large'); ?>"/>
+                     <?php endif;
+                     ?>
+                     <h3><?php echo get_the_title();?></h3>
+                     <p><?php echo get_post_meta( get_the_ID(), 'wda_casestudy_tagline', true );?></p>
+                     <!-- <p><?php echo get_the_excerpt();?></p> -->
+                     <button><a href="<?php echo get_permalink(get_the_ID()); ?>">project details</a></button>
+                     ?>
+                  </li>
+               <?php
+               $count++;
+               if($count > 2) {
+                  break;
+               }
+            }
+            ?>
          </ul>
+         <button><a href="<?php echo get_permalink(get_the_ID()); ?>">see more</a></button>
       </section>
       <?php
 

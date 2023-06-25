@@ -333,7 +333,6 @@ section.gallery li > p {
 
 /* 
    section.animated_tiles 
-   to do : for touch screens
 */
 section.animated_tiles {
    width:100%;
@@ -446,8 +445,6 @@ section.animated_tiles > ul > li:hover > button {
 
 }
 
-/* to do : if we 'section.feature_block.reverse_order', it stacks in sm w/ image below text 
-   - should always be img above text in sm */
 
 /*
    section.feature_block
@@ -632,8 +629,6 @@ section.cover_block div {
    margin-right:.5rem;
    padding:.5rem;
 }
-
-/* to do : make each block/component responsive - rollout */
 @media screen and (min-width: 768px) {
     
 }
