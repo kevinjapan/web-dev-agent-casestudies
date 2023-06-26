@@ -14,23 +14,28 @@ Access classes - use these to access the custom props
 }
 
 
-/* bg_navy */
-.bg_navy                {background-color:navy;color:white;}
-.bg_navy h1, .bg_navy h2, .bg_navy h3, .bg_navy h4, .bg_navy h5, .bg_navy h6 {color:white;}
-.bg_navy button         {color:lightgrey;}
-.bg_navy button:hover   {color:white;border:solid 2px white;}
-
 /* bg_white */
 .bg_white                     {background-color:white;color:black;}
 .bg_white h1, .bg_white h2, .bg_white h3, .bg_white h4, .bg_white h5, .bg_white h6, 
 .bg_white div.overlay h1,
 .bg_white div.overlay *       {color:black;}
-.bg_white button              {color:grey;border:solid 2px grey;}
-.bg_white button:hover        {color:black;border:solid 2px black;}
+.bg_white button              {color:grey;border:solid 1px grey;}
+.bg_white button:hover        {color:black;border:solid 1px black;}
+
+/* bg_grey */
+
+
+
+/* bg_navy */
+.bg_navy                {background-color:navy;color:white;}
+.bg_navy h1, .bg_navy h2, .bg_navy h3, .bg_navy h4, .bg_navy h5, .bg_navy h6 {color:white;}
+.bg_navy button         {color:lightgrey;}
+.bg_navy button:hover   {color:white;border:solid 1px white;}
+
 
 .bg_lightblue {background-color:lightblue;color:blue;}
-.bg_lightblue button              {color:grey;border:solid 2px grey;}
-.bg_lightblue button:hover        {color:black;border:solid 2px black;}
+.bg_lightblue button              {color:grey;border:solid 1px grey;}
+.bg_lightblue button:hover        {color:black;border:solid 1px black;}
 
 
 

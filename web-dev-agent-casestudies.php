@@ -72,6 +72,8 @@ class WedDevAgentCaseStudies {
    public function enqueue_assets() 
    {
       // to do : these files are included w/ web dev agent theme - how to avoid duplication - plugin can be standalone?
+      // check if these are included twice (duplicate) if present
+      // - if plugin included in other theme?
       // wp_enqueue_style(
       //    'wda_outline',
       //    plugin_dir_url( __FILE__ ) . 'css/outline.css',
@@ -138,6 +140,7 @@ class WedDevAgentCaseStudies {
 		$tagline = get_post_meta( $post->ID, 'wda_casestudy_tagline', true );
 		$url = get_post_meta( $post->ID, 'wda_casestudy_url', true );
 
+      // to do : limit input text lengths - rollout
      ?>
       <div>
          <label for="wda_casestudy_custom_metabox_tagline">tagline
@@ -234,13 +237,12 @@ class WedDevAgentCaseStudies {
                   </li>
                <?php
                $count++;
-               if($count > 2) {
-                  break;
-               }
+               if($count > 2) break;
             }
             ?>
          </ul>
-         <button><a href="<?php echo get_permalink(get_the_ID()); ?>">see more</a></button>
+         <!-- to do : get link to archive page from a singlepage - eg for same custom post type ? -->
+         <button class=""><a href="/wordpress-demo/casestudy/">More Projects</a></button>
       </section>
       <?php
 
