@@ -241,8 +241,11 @@ class WedDevAgentCaseStudies {
             }
             ?>
          </ul>
-         <!-- to do : get link to archive page from a singlepage - eg for same custom post type ? -->
-         <button class=""><a href="/wordpress-demo/casestudy/">More Projects</a></button>
+         
+         <button class="">
+            <a href="<?php echo get_post_type_archive_link('wda_casestudy'); ?>">More Projects</a>
+         </button>
+
       </section>
       <?php
 
