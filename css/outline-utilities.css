@@ -47,9 +47,6 @@ Access classes - use these to access the custom props
 
 
 
-
-/* to do : review below.. */
-
 /* bgs for blocks - so we can set other colors to complement - so these are not just single bg-color settings..*/
 .bg_primary {
    color:var(--primary_color);

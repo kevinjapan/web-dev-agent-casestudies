@@ -184,7 +184,6 @@ nav ul.nav_list {
    align-self:flex-start;
    padding:0;
    border-bottom:solid 3px hsl(0, 0%, 96%);
-   /* text-align:right;  to do : try this.. */
 
    -webkit-transform:translateY(-500px);
    -ms-transform:translateY(-500px);
