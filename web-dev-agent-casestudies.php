@@ -232,7 +232,6 @@ class WedDevAgentCaseStudies {
                      <p><?php echo get_post_meta( get_the_ID(), 'wda_casestudy_tagline', true );?></p>
                      <!-- <p><?php echo get_the_excerpt();?></p> -->
                      <button><a href="<?php echo get_permalink(get_the_ID()); ?>">project details</a></button>
-                     ?>
                   </li>
                <?php
                $count++;
