@@ -72,7 +72,13 @@ class WedDevAgentCaseStudies {
    public function enqueue_assets() 
    {
       // we don't enqueue these assets since they are enqueued by Web Dev Agent theme
-      // to do : verify, does WP enqueuing allow for this theme/plugin duplication and recognize/prevent it? rollout all WDA plugins
+
+      //
+      // to do : on-going
+      // does WP enqueuing allow for theme/plugin duplication and prevent it? (include css only once?)
+      // currently, we rely on WDA theme - so these plugins won't work in other themes. (require outline & wda.css)
+      //
+      
       // wp_enqueue_style(
       //    'wda_outline',
       //    plugin_dir_url( __FILE__ ) . 'css/outline.css',
