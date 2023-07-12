@@ -59,7 +59,6 @@ class WedDevAgentCaseStudies {
          'rewrite' => array( 'slug' => 'casestudy' ),  // custom slug
          'exclude_from_search' => true,
          'publicly_queryable' => true,    // false will exclude archive- and single- templates
-         'capabilitiy' => 'manage_options',
          'menu_icon' => 'dashicons-media-text',
       );
       register_post_type('wda_casestudy',$args);
