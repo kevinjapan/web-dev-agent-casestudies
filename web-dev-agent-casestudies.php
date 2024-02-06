@@ -71,48 +71,7 @@ class WedDevAgentCaseStudies {
    public function enqueue_assets() 
    {
       // we don't enqueue these assets since they are enqueued by Web Dev Agent theme
-
-      //
-      // to do : on-going
-      // does WP enqueuing allow for theme/plugin duplication and prevent it? (include css only once?)
-      // currently, we rely on WDA theme - so these plugins won't work in other themes. (require outline & wda.css)
-      //
-      
-      // wp_enqueue_style(
-      //    'wda_outline',
-      //    plugin_dir_url( __FILE__ ) . 'css/outline.css',
-      //    array(),
-      //    1,
-      //    'all'
-      // );  
-      // wp_enqueue_style(
-      //    'wda_outline_layouts',
-      //    plugin_dir_url( __FILE__ ) . 'css/outline-layouts.css',
-      //    array(),
-      //    1,
-      //    'all'
-      // );  
-      // wp_enqueue_style(
-      //    'wda_outline_custom_props',
-      //    plugin_dir_url( __FILE__ ) . 'css/outline-custom-props.css',
-      //    array(),
-      //    1,
-      //    'all'
-      // );  
-      // wp_enqueue_style(
-      //    'wda_outline_utilities',
-      //    plugin_dir_url( __FILE__ ) . 'css/outline-utilities.css',
-      //    array(),
-      //    1,
-      //    'all'
-      // ); 
-      // wp_enqueue_script(
-      //    'web-dev-agent',
-      //    plugin_dir_url( __FILE__ ) . 'js/web-dev-agent.js',
-      //    array('jquery'),
-      //    1,
-      //    true
-      // );
+      // to do : test opening in another theme - we may want some default fall-back styling 
    }
    
 
@@ -146,17 +105,38 @@ class WedDevAgentCaseStudies {
 
       // to do : limit input text lengths - rollout
      ?>
-      <div>
+      <label class="wda_label">
+         <span class="title">Tagline</span>
+         <span class="input-text-wrap">
+            <input
+               type="text"
+               class="wda_input"
+               name="wda_casestudy_tagline_field"
+               id="wda_casestudy_tagline_field"
+               value="<?php echo $tagline; ?>"> 
+         </span>
+      </label>
+      <label class="wda_label">
+         <span class="title">URL</span>
+         <span class="input-text-wrap">
+            <input
+               type="text"
+               name="wda_casestudy_url_field"
+               id="wda_casestudy_url_field"
+               value="<?php echo $url; ?>"> 
+         </span>
+      </label>
+
+      <!-- <div>
          <label for="wda_casestudy_custom_metabox_tagline">tagline
          </label>
-         <input
-            type="text"
-            name="wda_casestudy_tagline_field"
-            id="wda_casestudy_tagline_field"
-            value="<?php echo $tagline; ?>"
-         >
-      </div>
-      <div>
+            <input
+               type="text"
+               name="wda_casestudy_tagline_field"
+               id="wda_casestudy_tagline_field"
+               value="<?php echo $tagline; ?>"> 
+      </div> -->
+      <!-- <div>
          <label for="wda_casestudy_custom_metabox_url">url
          </label>
          <input
@@ -165,7 +145,7 @@ class WedDevAgentCaseStudies {
             id="wda_casestudy_url_field"
             value="<?php echo $url; ?>"
          >
-      </div>
+      </div> -->
       <?php
    }
 
