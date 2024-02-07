@@ -23,6 +23,7 @@ class WedDevAgentCaseStudies {
 
       // assets
       add_action('wp_enqueue_scripts',array($this,'enqueue_assets'));
+      add_action('admin_enqueue_scripts', array($this,'enqueue_admin_assets'));
 
       // 'edit post' page
 		add_action('add_meta_boxes', array( $this,'add_casestudy_meta_box')); 
@@ -68,10 +69,16 @@ class WedDevAgentCaseStudies {
    //
    // assets
    //
-   public function enqueue_assets() 
-   {
+   public function enqueue_assets() {
+
+   }
+
+   public function enqueue_admin_assets() {
       // we don't enqueue these assets since they are enqueued by Web Dev Agent theme
       // to do : test opening in another theme - we may want some default fall-back styling 
+        
+      wp_register_style('wda_custom_wp_admin_css',plugin_dir_url( __FILE__ ) . 'css/wda-admin-style.css',array(),1,'all'); 
+      wp_enqueue_style( 'wda_custom_wp_admin_css' );
    }
    
 
@@ -106,46 +113,24 @@ class WedDevAgentCaseStudies {
       // to do : limit input text lengths - rollout
      ?>
       <label class="wda_label">
-         <span class="title">Tagline</span>
-         <span class="input-text-wrap">
+         <span class="wda_title">Tagline</span>
             <input
-               type="text"
-               class="wda_input"
-               name="wda_casestudy_tagline_field"
                id="wda_casestudy_tagline_field"
-               value="<?php echo $tagline; ?>"> 
-         </span>
+               name="wda_casestudy_tagline_field"
+               class="wda_input"
+               class="wda_input"
+               type="text"
+               value="<?php echo $tagline; ?>">
       </label>
       <label class="wda_label">
-         <span class="title">URL</span>
-         <span class="input-text-wrap">
+         <span class="wda_title">URL</span>
             <input
-               type="text"
-               name="wda_casestudy_url_field"
                id="wda_casestudy_url_field"
-               value="<?php echo $url; ?>"> 
-         </span>
-      </label>
-
-      <!-- <div>
-         <label for="wda_casestudy_custom_metabox_tagline">tagline
-         </label>
-            <input
+               name="wda_casestudy_url_field"
+               class="wda_input"
                type="text"
-               name="wda_casestudy_tagline_field"
-               id="wda_casestudy_tagline_field"
-               value="<?php echo $tagline; ?>"> 
-      </div> -->
-      <!-- <div>
-         <label for="wda_casestudy_custom_metabox_url">url
-         </label>
-         <input
-            type="text"
-            name="wda_casestudy_url_field"
-            id="wda_casestudy_url_field"
-            value="<?php echo $url; ?>"
-         >
-      </div> -->
+               value="<?php echo $url; ?>">
+      </label>
       <?php
    }
 
