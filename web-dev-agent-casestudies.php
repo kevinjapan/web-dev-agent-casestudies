@@ -72,11 +72,7 @@ class WedDevAgentCaseStudies {
    public function enqueue_assets() {
 
    }
-
-   public function enqueue_admin_assets() {
-      // we don't enqueue these assets since they are enqueued by Web Dev Agent theme
-      // to do : test opening in another theme - we may want some default fall-back styling 
-        
+   public function enqueue_admin_assets() { 
       wp_register_style('wda_custom_wp_admin_css',plugin_dir_url( __FILE__ ) . 'css/wda-admin-style.css',array(),1,'all'); 
       wp_enqueue_style( 'wda_custom_wp_admin_css' );
    }
@@ -113,7 +109,7 @@ class WedDevAgentCaseStudies {
       // to do : limit input text lengths - rollout
      ?>
       <label class="wda_label">
-         <span class="wda_title">Tagline</span>
+         <span class="wda_label_text">Tagline</span>
             <input
                id="wda_casestudy_tagline_field"
                name="wda_casestudy_tagline_field"
@@ -123,7 +119,7 @@ class WedDevAgentCaseStudies {
                value="<?php echo $tagline; ?>">
       </label>
       <label class="wda_label">
-         <span class="wda_title">URL</span>
+         <span class="wda_label_text">URL</span>
             <input
                id="wda_casestudy_url_field"
                name="wda_casestudy_url_field"
